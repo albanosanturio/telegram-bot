@@ -11,9 +11,13 @@ https://www.youtube.com/watch?v=vZtm1wuA2yc
 https://web.telegram.org/k/#@BotFather
 
 #### Requirements:
-requirements
+Created a virtual environment to set required libraries
+pip install python-telegram-bot
 
-##### Config.json file
+##### First settings
+Directly through telegram bot we create or bot and do our first settings
+/newbot
+/
 .json file
 
 ##### Arguments
