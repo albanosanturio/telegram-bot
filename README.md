@@ -18,7 +18,6 @@ pip install python-telegram-bot
 Directly through telegram bot we create or bot and do our first settings
 Easiest way is to use the @Botfather bot
 
-![BotFather](./readmeFiles/botfather.png =400x400)
 <img src="./readmeFiles/botfather.png" alt="BotFather" width="400" height="400">
 
 /newbot
