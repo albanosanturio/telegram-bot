@@ -5,10 +5,10 @@ Choosing different options through commands, like a /random quote, /maradona quo
 
 
 #### References:
-https://core.telegram.org/bots
-https://www.youtube.com/watch?v=vZtm1wuA2yc
-https://www.youtube.com/watch?v=2TI-tCVhe9k
-https://web.telegram.org/k/#@BotFather
+-https://core.telegram.org/bots
+-https://www.youtube.com/watch?v=vZtm1wuA2yc
+-https://www.youtube.com/watch?v=2TI-tCVhe9k
+-https://web.telegram.org/k/#@BotFather
 
 #### Requirements:
 Created a virtual environment to set required libraries
@@ -19,6 +19,7 @@ Directly through telegram bot we create or bot and do our first settings
 Easiest way is to use the @Botfather bot
 
 ![BotFather](./readmeFiles/botfather.png =400x400)
+<img src="./readmeFiles/botfather.png" alt="BotFather" width="400" height="400">
 
 /newbot
 /setdescription
