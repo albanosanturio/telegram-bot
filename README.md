@@ -9,6 +9,7 @@ Choosing different options through commands, like a /random quote, /maradona quo
 - https://www.youtube.com/watch?v=vZtm1wuA2yc
 - https://www.youtube.com/watch?v=2TI-tCVhe9k
 - https://web.telegram.org/k/#@BotFather
+- https://python-telegram-bot.org/
 
 #### Requirements:
 Created a virtual environment to set required libraries
