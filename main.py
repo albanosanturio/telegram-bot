@@ -62,6 +62,8 @@ async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
      print('starting bot')
+
+     #Build
      app = Application.builder().token(token).build()
      
      #Commands
