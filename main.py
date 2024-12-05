@@ -1,16 +1,38 @@
 from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+import pandas as pd
+import random
 
-
+phrases_path = 'phrases.txt'
 token_path = "token.txt"
 with open(token_path) as file:
         token = file.read()
 
 print(token)
 
+
 BOT_USERNAME = "@argentinian_quotes_bot"
 
+
+phrases_df = pd.read_csv('phrases.txt',  sep='//', header = None)
+diego_phrases_df = phrases_df[phrases_df[1] == 'Diego Maradona']
+
+#aux functions
+
+def random_phrase(df):
+   random_row = random.randint(0,len(df)-1)
+   phrase_esp = df[2].loc[random_row]
+   phrase_eng = df[3].loc[random_row]
+   phrase_author = df[1].loc[random_row]
+   return (phrase_esp +"\n" + phrase_eng + "\n" + phrase_author + "\n")
+
+#def diego_phrase():
+#   random_row = random.randint(0,len(phrases_df)-1)
+#   phrase_esp = phrases_df[2].loc[random_row]
+#   phrase_eng = phrases_df[3].loc[random_row]
+#   phrase_author = phrases_df[1].loc[random_row]
+#   return (phrase_esp +"\n" + phrase_eng + "\n" + phrase_author + "\n")
 
 #COMMANDS
 #asyn makes functions asyncronous
@@ -18,13 +40,13 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Hello! Thanks for chatting')
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Hey there, let me show your options here: /random /diego")
+    await update.message.reply_text("Hey there, let me show your options here:\n /random \n /diego \n")
 
 async def diego_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Seems you want a diego phrase')
+    await update.message.reply_text('Seems you want a Maradona phrase, here you go: \n \n' + random_phrase(diego_phrases_df))
 
 async def random_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Seems you want a random phrase')
+    await update.message.reply_text('Seems you want a random phrase, here you go: \n \n' + random_phrase(phrases_df))
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Custom command')
