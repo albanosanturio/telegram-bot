@@ -18,23 +18,33 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Hello! Thanks for chatting')
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("I'm a bot beep beep boludo")
+    await update.message.reply_text("Hey there, let me show your options here: /random /diego")
+
+async def diego_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('Seems you want a diego phrase')
+
+async def random_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text('Seems you want a random phrase')
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Custom command')
+
+
 
 
 # RESPONSES
 
 def handle_response(text: str) -> str:
     processed_text: str = text.lower()
-    if "hello" in processed_text:
-         return "Hey there"
-    if "how are you" in processed_text:
-         return "all gooood"
-    if "aguante argentina" in processed_text:
-         return "sapee"
-    return "EHHHH?"
+    if "boludo" in processed_text:
+         return "Hey there, I'm a bot but I'm no boludo"
+    if "mate" in processed_text:
+         return "Nothing like a warm mate"
+    if "sape" in processed_text:
+         return "SAPE"
+    if "phrase" in processed_text:
+         return "Try using /help to get the phrase commands"
+    return "Sorry brother, can you rephrase? Or go /help to get some guidance"
 
 
 #Messages
@@ -69,6 +79,8 @@ if __name__ == '__main__':
      #Commands
      app.add_handler(CommandHandler('start', start_command))
      app.add_handler(CommandHandler('help', help_command))
+     app.add_handler(CommandHandler('random', random_command))
+     app.add_handler(CommandHandler('diego', diego_command))
      app.add_handler(CommandHandler('custom', custom_command))
 
      # Messages
