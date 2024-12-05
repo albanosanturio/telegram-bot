@@ -27,12 +27,6 @@ def random_phrase(df):
    phrase_author = df[1].loc[random_row]
    return (phrase_esp +"\n" + phrase_eng + "\n" + phrase_author + "\n")
 
-#def diego_phrase():
-#   random_row = random.randint(0,len(phrases_df)-1)
-#   phrase_esp = phrases_df[2].loc[random_row]
-#   phrase_eng = phrases_df[3].loc[random_row]
-#   phrase_author = phrases_df[1].loc[random_row]
-#   return (phrase_esp +"\n" + phrase_eng + "\n" + phrase_author + "\n")
 
 #COMMANDS
 #asyn makes functions asyncronous
