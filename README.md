@@ -49,6 +49,6 @@ Downsides: Once you let the script run, console will eventually crash and bot wi
 # Second deploy
 Now starting a new deploy on AWS, using lambda functions.
 
-<img src="./readmeFiles/awslambda.png" alt="deploy2" width="400" height="400">
+<img src="./readmeFiles/awslambda.png" alt="deploy2" width="400" height="350">
 
 WIP as of 09/12/2024
