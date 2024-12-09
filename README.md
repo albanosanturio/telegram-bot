@@ -40,11 +40,11 @@ CommandHandler
 #### Deploying bot
 # First deploy
 First deploy was done on https://www.pythonanywhere.com
-<img src="./readmeFiles/pythonanywhere.png" alt="deploy1">
+<img src="./readmeFiles/pythonanywhere.png" alt="deploy1" width="400" height="200">
 This website lets you manage a few consoles with limited cpu usage per day and limited file storage
 Downsides: Once you let the script run, console will eventually crash and bot will stop running.
 
 # Second deploy
 Now starting a new deploy on AWS, using lambda functions.
-<img src="./readmeFiles/awslambda.png" alt="deploy2">
+<img src="./readmeFiles/awslambda.png" alt="deploy2" width="400" height="400">
 WIP as of 09/12/2024
